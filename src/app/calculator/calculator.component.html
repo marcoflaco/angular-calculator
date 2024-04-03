@@ -1,0 +1,31 @@
+<div class="skin-buttons">
+  <button (click)="changeSkin('calculator')">Dark Skin</button>
+  <button (click)="changeSkin('light-skin')" id="light-skin-button">Light Skin</button>
+</div>
+<div class="calculator" [ngClass]="currentSkin" tabindex="0">
+  <div class="display">{{ displayValue }}</div>
+  <!-- Number buttons -->
+  <div class="number-buttons">
+      <button (click)="onDigit('1')">1</button>
+      <button (click)="onDigit('2')">2</button>
+      <button (click)="onDigit('3')">3</button>
+      <button (click)="onDigit('4')">4</button>
+      <button (click)="onDigit('5')">5</button>
+      <button (click)="onDigit('6')">6</button>
+      <button (click)="onDigit('7')">7</button>
+      <button (click)="onDigit('8')">8</button>
+      <button (click)="onDigit('9')">9</button>
+      <button (click)="onDigit('0')">0</button>
+  </div>
+  <!-- Operation buttons -->
+  <div class="operation-buttons">
+      <button (click)="performOperation('+')">+</button>
+      <button (click)="performOperation('-')">-</button>
+      <button (click)="performOperation('*')">&times;</button>
+      <button (click)="performOperation('/')">÷</button>
+      <button (click)="performOperation('square')">x²</button>
+      <button (click)="performOperation('sqrt')">√</button>
+      <button (click)="clear()">C</button>
+      <button (click)="calculate()">=</button>
+  </div>
+</div>
